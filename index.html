@@ -9,6 +9,9 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="/path/to/styles/default.css">
+		<script src="/path/to/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -66,25 +69,25 @@
 					</ul>
 				</section>
 				<section>
-					All three will be arrays to hold more than one item.
+					Both will be arrays to hold more than one item.
 				</section>
 				<section>
-					studentNames will need to hold text, testScores	and testCount will both hold numbers.	
+					studentNames will need to hold text, and testScores will hold numbers.	
 				</section>
 				<section>
-					Students can only do whole numbers of tests, they can't take 3.6 tests.	
+					Students cannot be awarded half marks.			
 				</section>
 				<section>
-					testCount will need to be an integer.			
+					testScores should be a integer 			
 				</section>
 				<section>
-					Nothing says students cannot be awarded half marks.			
+					I would initialise both arrays to blank arrays.		
 				</section>
 				<section>
-					testScores should be a floating point 			
-				</section>
-				<section>
-					#			
+					<pre><code>
+						string[] studentNames = new string[] {};
+						int[] testScores = new int[] {};
+					<pre><code>					
 				</section>
 			</section>
 			<section>
