@@ -138,9 +138,9 @@
 		I would initialise test scores to an array with 10 slots.		
 	</section>
 	<section>
-		<pre><code>public static void Main (string[] args) {
-	string[] studentNames = new string[10];
-	int[] testScores = new int[] {};
+		<pre><code>public static void Main (string[] args) {	
+	string[] studentNames = new string[] {};
+	int[] testScores = new int[10];
 }</code></pre>					
 	</section>
 </section>
@@ -153,8 +153,9 @@
 	<section>We can break our solution down into 3 main parts</section>
 	<section>The 3 Parts are inputNames, inputScores and displayStudentsWhoPassed</section>
 	<section>
-		<pre><code>public static void Main (string[] args) {
-	...
+		<pre><code>public static void Main (string[] args) {	
+	string[] studentNames = new string[] {};
+	int[] testScores = new int[10];
 }
 
 /*
@@ -201,7 +202,73 @@ static void displayStudentsWhoPassed()
 			This function looks at the total for each student and displays the names of all students who scored over 50 points.
 		</P>
 	</section>			
-	<section><h2>Building Points</h2></section>
+	<section><h2>Building Points</h2></section>	
+	<section>
+		<H2>inputNames()</H2>
+		<ul>
+			<li>This does not need any information from the main program.</li>
+			<li>It will return an array of strings.</li>
+			<li>We can set it up to return some random names (Amy, Ben, Carol, Dean, Even, Francesca, George).</li>
+			<li>The returning data will be stored in studentNames.</li>
+		</ul>
+	</section>		
+	<section>
+		<H2>inputScores()</H2>
+		<ul>
+			<li>This will need studentNames and testScores.</li>
+			<li>It will return an array of integers.</li>
+			<li>We can set it up to return some random numbers (30, 55, 27, 80, 12, 70, 12).</li>
+			<li>The returning data will be stored in testScores.</li>
+		</ul>
+	</section>		
+	<section>
+		<H2>displayStudentsWhoPassed()</H2>
+		<ul>
+			<li>This will need studentNames and testScores.</li>
+			<li>It will not need to return any values.</li>
+			<li>We can set it to display a hardcoded desult(The following students have passed the course:Ben, Dean, Francesca,).</li>
+		</ul>
+	</section>		
+	<section>
+		<H2>inputNames()</H2>
+<pre><code>static string[] inputNames()
+{
+	return new string[] { "Amy", "Ben", "Carol", "Dean", "Even", "Francesca", "George"};
+} 
+</code></pre>
+	</section>		
+	<section>
+		<H2>inputScores()</H2>
+<pre><code>static int[] inputScores(string[] studentNames, int[] testScores)
+{
+	return new int[] { 30, 55, 27, 80, 12, 70, 12};
+}
+</code></pre>		
+	</section>		
+	<section>
+		<H2>displayStudentsWhoPassed()</H2>
+<pre><code>static void displayStudentsWhoPassed(string[] studentNames, int[] testScores)
+{
+	Console.WriteLine("static void displayStudentsWhoPassed(string[] studentNames, int[] testScores)");
+	Console.WriteLine("The following students have passed the course:\nBen, \nDean, \nFrancesca,");
+} 
+</code></pre>				
+	</section>			
+	<section>
+		<H2>Main()</H2>
+<pre><code>public static void Main (string[] args) 
+{
+	string[] studentNames = new string[] {};
+	int[] testScores = new int[10];
+
+	studentNames = inputNames();
+	testScores = inputScores(studentNames, testScores);
+	displayStudentsWhoPassed(studentNames, testScores);
+
+	displayAllArrays(studentNames, testScores);
+}
+</code></pre>				
+	</section>	
 </section>
 			</div>
 		</div>
