@@ -267,8 +267,11 @@ static void displayStudentsWhoPassed()
 	int[] testScores = new int[10];
 
 	studentNames = inputNames();
-	testScores = inputScores(studentNames, testScores);
-	displayStudentsWhoPassed(studentNames, testScores);
+	while(true)
+	{
+		testScores = inputScores(studentNames, testScores);
+		displayStudentsWhoPassed(studentNames, testScores);
+	}
 }
 </code></pre>				
 	</section>	
